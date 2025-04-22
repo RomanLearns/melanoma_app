@@ -132,6 +132,22 @@ with tab1:
         st.info("Please upload an image file.")
 
 with tab2:
+    st.header("Melanoma App Metric Page")
     # metrics tab
     # have 7 plots we need to show, want to do 3x3 perhaps? 4x2? 3x2 with a 1 below in the middle?
-    rows = 
+    left, mid, right = st.columns(3)
+    
+    with left:
+        st.image('./evaluation_results/accuracy_plot.png', caption="Accuracy Plot", use_column_width=True)
+        st.image('./evaluation_results/precision_recall_curve.png', caption="Precicion-Recall Curve", use_column_width=True)
+        st.text("These are the plots showing the efficacy of the model")
+        
+    with mid:
+        st.image('./evaluation_results/auc_plot.png', caption="AUC Plot", use_column_width=True)
+        st.image('./evaluation_results/confusion_matrix.png', caption="Confusion Matrix", use_column_width=True)        
+        st.image('./evaluation_results/loss_plot.png', caption="Loss Plot", use_column_width=True)
+
+    with right:
+        st.image('./evaluation_results/precision_recall_plot.png', caption="Precision-Recall Plot", use_column_width=True)
+        st.image('./evaluation_results/roc_curve.png', caption="ROC Curve", use_column_width=True) 
+        st.text("A focus on precision helps reduce false positives hence the confusion matrix")
