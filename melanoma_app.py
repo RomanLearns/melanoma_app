@@ -124,7 +124,7 @@ with tab1:
                 
                 # image_output = image.resize((800, 800))
 
-                st.image(image, caption='Uploaded Image With Heatmap', use_column_width=True)
+                st.image(image, caption='Uploaded Image With Heatmap', use_container_width=True)
             
         except Exception as e: st.error(f"Error processing image: {e}"); uploaded_file = None
     else:
@@ -137,16 +137,16 @@ with tab2:
     left, mid, right = st.columns(3)
     
     with left:
-        st.image('./evaluation_results/accuracy_plot.png', caption="Accuracy Plot", use_column_width=True)
-        st.image('./evaluation_results/precision_recall_curve.png', caption="Precicion-Recall Curve", use_column_width=True)
+        st.image('./evaluation_results/accuracy_plot.png', caption="Accuracy Plot", use_container_width=True)
+        st.image('./evaluation_results/precision_recall_curve.png', caption="Precicion-Recall Curve", use_container_width=True)
         st.text("These are the plots showing the efficacy of the model")
         
     with mid:
-        st.image('./evaluation_results/auc_plot.png', caption="AUC Plot", use_column_width=True)
-        st.image('./evaluation_results/confusion_matrix.png', caption="Confusion Matrix", use_column_width=True)        
-        st.image('./evaluation_results/loss_plot.png', caption="Loss Plot", use_column_width=True)
+        st.image('./evaluation_results/auc_plot.png', caption="AUC Plot", use_container_width=True)
+        st.image('./evaluation_results/confusion_matrix.png', caption="Confusion Matrix", use_container_width=True)        
+        st.image('./evaluation_results/loss_plot.png', caption="Loss Plot", use_container_width=True)
 
     with right:
-        st.image('./evaluation_results/precision_recall_plot.png', caption="Precision-Recall Plot", use_column_width=True)
-        st.image('./evaluation_results/roc_curve.png', caption="ROC Curve", use_column_width=True) 
+        st.image('./evaluation_results/precision_recall_plot.png', caption="Precision-Recall Plot", use_container_width=True)
+        st.image('./evaluation_results/roc_curve.png', caption="ROC Curve", use_container_width=True) 
         st.text("A focus on precision helps reduce false positives hence the confusion matrix")
