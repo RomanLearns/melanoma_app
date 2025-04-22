@@ -1,8 +1,9 @@
+tensorflow==2.19.0
 matplotlib==3.10.1
 numpy==1.26.2
 opencv_python==4.11.0.86
 pandas==2.2.3
-Pillow==11.2.1
+Pillow
 scikit_learn==1.6.0
 streamlit==1.32.0
-tensorflow
+
