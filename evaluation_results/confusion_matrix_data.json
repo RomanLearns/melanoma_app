@@ -1,0 +1,16 @@
+{
+    "matrix": [
+        [
+            992,
+            8
+        ],
+        [
+            594,
+            406
+        ]
+    ],
+    "class_names": [
+        "Benign",
+        "Malignant"
+    ]
+}
