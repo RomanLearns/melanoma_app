@@ -10,7 +10,6 @@ import numpy as np
 from PIL import Image
 import matplotlib as mpl # For colormap
 import matplotlib.pyplot as plt # For colormap usage
-import cv2 # For resizing heatmap
 import os
 import traceback
 
