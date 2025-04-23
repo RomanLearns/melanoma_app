@@ -95,7 +95,7 @@ tab1, tab2 = st.tabs(["Upload Image", "Metrics"])
 with tab1:
     uploaded_file = st.file_uploader("Choose a skin lesion image...", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
-        _, mid, _ = st.columns([2, 7, 2])
+        _, mid, _ = st.columns([4, 7, 2])
         try:
             with mid:
                 image = Image.open(uploaded_file).convert('RGB')
@@ -122,9 +122,9 @@ with tab1:
                 heatmap = make_gradcam_heatmap(img_array_expanded_orig, photo_model, 'top_conv')
                 image = display_gradcam_overlay(img_resized_display, heatmap, alpha=0.4)
                 
-                # image_output = image.resize((800, 800))
+                image_output = image.resize((800, 800))
 
-                st.image(image, caption='Uploaded Image With Heatmap', use_container_width=True)
+                st.image(image_output, caption='Uploaded Image With Heatmap', use_container_width=False)
             
         except Exception as e: st.error(f"Error processing image: {e}"); uploaded_file = None
     else:
